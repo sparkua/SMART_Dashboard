@@ -1,3 +1,5 @@
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,25 +11,29 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+    <title>SB Admin 3 - Bootstrap Admin Theme</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    <spring:url value="/resources/core/css/bootstrap.min.css" var="bootstrapCss" />
     <!-- MetisMenu CSS -->
-    <link href="../bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
-
+    <spring:url value="/resources/core/css/metisMenu.min.css" var="metisMenu"/>
     <!-- Timeline CSS -->
-    <link href="../dist/css/timeline.css" rel="stylesheet">
-
+    <spring:url value="/resources/core/css/timeline.css" var="timeLine"/>
     <!-- Custom CSS -->
-    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
-
+    <spring:url value="/resources/core/css/sb-admin-2.css" var="sbAdmin"/>
     <!-- Morris Charts CSS -->
-    <link href="../bower_components/morrisjs/morris.css" rel="stylesheet">
-
+    <spring:url value="/resources/core/css/morris.css" var="morris"/>
     <!-- Custom Fonts -->
-    <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <spring:url value="/resources/core/css/font-awesome.min.css" var="awesome"/>
+
+    <link href="${bootstrapCss}" rel="stylesheet" />
+    <link href="${metisMenu}" rel="stylesheet" />
+    <link href="${timeLine}" rel="stylesheet" />
+    <link href="${sbAdmin}" rel="stylesheet" />
+    <link href="${morris}" rel="stylesheet" />
+    <link href="${awesome}"  rel="stylesheet" type="text/css" />
+
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -51,7 +57,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">SB Admin v2.0</a>
+                <a class="navbar-brand" href="index.jsp">SB Admin v2.0</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -280,7 +286,7 @@
                             <!-- /input-group -->
                         </li>
                         <li>
-                            <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                            <a href="index.jsp"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
@@ -919,22 +925,21 @@
     </div>
     <!-- /#wrapper -->
 
-    <!-- jQuery -->
-    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <spring:url value="/resources/core/js/bootstrap.min.js" var="bootstrapJs" />
+    <spring:url value="/resources/core/js/jquery.min.js" var="jquery" />
+    <spring:url value="/resources/core/js/metisMenu.min.js" var="metisMenu" />
+    <spring:url value="/resources/core/js/raphael-min.js" var="raphael" />
+    <spring:url value="/resources/core/js/morris.min.js" var="morris" />
+    <spring:url value="/resources/core/js/morris-data.js" var="morrisData" />
+    <spring:url value="/resources/core/js/sb-admin-2.js" var="sbAdmin" />
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-
-    <!-- Metis Menu Plugin JavaScript -->
-    <script src="../bower_components/metisMenu/dist/metisMenu.min.js"></script>
-
-    <!-- Morris Charts JavaScript -->
-    <script src="../bower_components/raphael/raphael-min.js"></script>
-    <script src="../bower_components/morrisjs/morris.min.js"></script>
-    <script src="../js/morris-data.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="../dist/js/sb-admin-2.js"></script>
+    <script src="${jquery}"></script>
+    <script src="${bootstrapJs}"></script>
+    <script src="${metisMenu}"></script>
+    <script src="${raphael}"></script>
+    <script src="${morris}"></script>
+    <script src="${morrisData}"></script>
+    <script src="${sbAdmin}"></script>
 
 </body>
 

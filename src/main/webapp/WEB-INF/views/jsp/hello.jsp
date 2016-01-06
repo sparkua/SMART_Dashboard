@@ -44,7 +44,7 @@
 		<h2>Heading</h2>
 		<p>ABC</p>
 		<p>
-			<a class="btn btn-default" href="index.html" role="button">View details</a>
+			<a class="btn btn-default" href="index.jsp" role="button">View details</a>
 		</p>
 	</div>
 	<div class="col-md-4">
