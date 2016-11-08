@@ -11,7 +11,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 3 - Bootstrap Admin Theme</title>
+    <title><c:out value='${message}' />     SMART Dashboard</title>
 
     <!-- Bootstrap Core CSS -->
     <spring:url value="/resources/core/css/bootstrap.min.css" var="bootstrapCss" />
